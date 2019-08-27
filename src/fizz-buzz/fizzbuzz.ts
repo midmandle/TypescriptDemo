@@ -2,13 +2,21 @@ export class FizzBuzz {
     // tslint:disable-next-line:no-empty
     constructor() {
     }
-    run(value: number): string {
-        if(value % 5 === 0 && value % 3 === 0)
+    isFizzBuzz(value: number): string {
+        if(this.isDivisibleBy5(value) && this.isDivisibleBy3(value))
             return "FizzBuzz";
-        if(value % 5 === 0)
+        if(this.isDivisibleBy5(value))
             return "Buzz";
-        if(value % 3 === 0)
+        if(this.isDivisibleBy3(value))
             return "Fizz";
         return value.toString();
+    }
+
+    private isDivisibleBy5(value: number) {
+        return value % 5 === 0;
+    }
+
+    private isDivisibleBy3(value: number) {
+        return value % 3 === 0;
     }
 }

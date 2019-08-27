@@ -10,8 +10,9 @@ describe("fizz buzz", () => {
     ${5} | ${"Buzz"}
     ${10} | ${"Buzz"}
     ${15} | ${"FizzBuzz"}
+    ${30} | ${"FizzBuzz"}
     `("should return $output given $input", ({input, output}) => {
         const fizzbuzz = new FizzBuzz();
-        expect(fizzbuzz.run(input)).toBe(output);
+        expect(fizzbuzz.isFizzBuzz(input)).toBe(output);
     });
 });
