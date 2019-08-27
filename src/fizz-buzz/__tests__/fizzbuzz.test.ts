@@ -1,23 +1,14 @@
 import {FizzBuzz} from "../fizzbuzz";
 
 describe("fizz buzz", () => {
-    it("should return value of 1", () => {
+    it.each`
+    input | output
+    ${1} | ${"1"}
+    ${2} | ${"2"}
+    ${3} | ${"Fizz"}
+    ${6} | ${"Fizz"}
+    `("should return $output given $input", ({input, output}) => {
         const fizzbuzz = new FizzBuzz();
-        expect(fizzbuzz.run(1)).toBe("1");
-    });
-
-    it("should return value of 1", () => {
-        const fizzbuzz = new FizzBuzz();
-        expect(fizzbuzz.run(2)).toBe("2");
-    });
-
-    it("should return Fizz for 3", () => {
-        const fizzbuzz = new FizzBuzz();
-        expect(fizzbuzz.run(3)).toBe("Fizz");
-    });
-
-    it("should return Fizz for 6", () => {
-        const fizzbuzz = new FizzBuzz();
-        expect(fizzbuzz.run(6)).toBe("Fizz");
+        expect(fizzbuzz.run(input)).toBe(output);
     });
 });
