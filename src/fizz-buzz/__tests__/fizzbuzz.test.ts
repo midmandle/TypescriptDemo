@@ -15,4 +15,9 @@ describe("fizz buzz", () => {
         const fizzbuzz = new FizzBuzz();
         expect(fizzbuzz.run(3)).toBe("Fizz");
     });
+
+    it("should return Fizz for 6", () => {
+        const fizzbuzz = new FizzBuzz();
+        expect(fizzbuzz.run(6)).toBe("Fizz");
+    });
 });
