@@ -8,6 +8,7 @@ describe("fizz buzz", () => {
     ${3} | ${"Fizz"}
     ${6} | ${"Fizz"}
     ${5} | ${"Buzz"}
+    ${10} | ${"Buzz"}
     `("should return $output given $input", ({input, output}) => {
         const fizzbuzz = new FizzBuzz();
         expect(fizzbuzz.run(input)).toBe(output);
