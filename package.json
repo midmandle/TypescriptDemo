@@ -2,14 +2,15 @@
   "name": "typescriptdummy",
   "version": "1.0.0",
   "description": "A dummy practice demo practice project",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
+    "start": "tsc && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "DEMO"
   ],
-  "author": "Aurelija",
+  "author": "Aurelija problem not mine",
   "license": "ISC",
   "devDependencies": {
     "tslint": "^5.19.0",
