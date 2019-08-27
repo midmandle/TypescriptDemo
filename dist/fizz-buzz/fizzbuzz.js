@@ -5,7 +5,7 @@ class FizzBuzz {
     constructor() {
     }
     run(value) {
-        return 1;
+        return value;
     }
 }
 exports.FizzBuzz = FizzBuzz;
